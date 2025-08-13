@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c5ff670b563c94cac9e25fe4b793a0, type: 3}
+  m_Name: 3
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: Haha that's right you also agree! For a villain you seem very approachable
+      so I let you in on a secret. I, the great cassandra, witch of the limbo..-ish
+      realm, am actually a magical girl!
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 40, y: 0}
+      moveSpeed: 0
+  - text: And you my dear captor do seem like the villain that would make my act-
+      I mean my calling for justice finally legitimate.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: You see every magical girl has their own nemesis that they try to either
+      defeat or turn good but for me, no one wanted to play alo(ng)- was evil enough
+      to fulfill such a meaningful task. Kind of ironic considering evryone in here
+      is supposed to be evil enough to go to hell sooner or later.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Anyways I will bestow you with the great honor of being my nemesis!
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  background: {fileID: 21300000, guid: 0f061b4bd0275bc4eb60f2af31e7375a, type: 3}
+  backgroundVideo: {fileID: 4554513086353460736, guid: 6e9d5d062320dd54bb047daa327d083d,
+    type: 3}
+  nextScene: {fileID: 11400000, guid: e5edfb58a9f9f3d4888acd7865c2c406, type: 2}

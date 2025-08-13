@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b205d3c2aca1be4cbba1df6832752d3, type: 3}
+  m_Name: Cassy
+  m_EditorClassIdentifier: 
+  speakerName: Cassy
+  textColor: {r: 1, g: 0, b: 0, a: 0}
+  sprites:
+  - {fileID: 21300000, guid: 38e82790bc4eaaa489e75934eef00c2f, type: 3}
+  - {fileID: 21300000, guid: 4e2feca81ec2c9e489dcf538bed083a5, type: 3}
+  - {fileID: 21300000, guid: e37d6ae96be1db4419c381fd650e51bf, type: 3}
+  - {fileID: 21300000, guid: 38e82790bc4eaaa489e75934eef00c2f, type: 3}
+  videos:
+  - {fileID: 6278071537777364874, guid: ea69a0fb01a5b5245ad63902cfb1b283, type: 3}
+  - {fileID: 4227674252411631160, guid: 071ea99159eb1f149bcf6184c7cba785, type: 3}
+  - {fileID: 4227674252411631160, guid: 071ea99159eb1f149bcf6184c7cba785, type: 3}
+  - {fileID: 4227674252411631160, guid: 071ea99159eb1f149bcf6184c7cba785, type: 3}
+  prefab: {fileID: -4850374283048913396, guid: 8b45591e2b66a9e4e93817da4de35308, type: 3}
+  prefabCharacter: {fileID: 8671937851536315351, guid: 505db2ab6be840e4991e3b755e11ddd0,
+    type: 3}

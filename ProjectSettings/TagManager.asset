@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Punch
+  - canPickUp
+  - StickyNote
+  - Hand
+  - StickyNote2
+  - StickyNote3
+  - StickyNote4
+  - Floor
+  - Poof
+  - Fog
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Foreground
+  - Background
+  - camera
+  - holdLayer
+  - NoPost
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 272098955
+    locked: 0
+  - name: Foreground
+    uniqueID: 144742087
+    locked: 0

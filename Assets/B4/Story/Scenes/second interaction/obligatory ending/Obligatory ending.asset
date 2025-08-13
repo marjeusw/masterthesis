@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c5ff670b563c94cac9e25fe4b793a0, type: 3}
+  m_Name: Obligatory ending
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: This is the end of the prototype.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Now if you click on the keyboard key 2 you can experience the 3D interaction.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: If you click on the keyboard key 3 you'll get back here.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Also if you click on one of the choices you'll go back to the start.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Hope you had fun.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  background: {fileID: 21300000, guid: ec03f79379868c642b48ae5ddc821b6d, type: 3}
+  backgroundVideo: {fileID: 4554513086353460736, guid: e0ebcb67bb753fc469c2b83f87bb7fb1,
+    type: 3}
+  nextScene: {fileID: 11400000, guid: 541c337c87f5fb646a60fa3aba0c7d84, type: 2}

@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c5ff670b563c94cac9e25fe4b793a0, type: 3}
+  m_Name: 4 1
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: Hah! I knew you would decline! How would a peasant like you know what treasure
+      is in front of them. Well no matter for I shall show you the right path anyways.
+      I couldn't possibly let the work of them go unnoticed.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 40, y: 0}
+      moveSpeed: 0
+  - text: As you see this silk is special spider silk. The spider company that existed
+      a hundred years ago had just closed down for good after the work environment
+      for older spider generation had gone so bad that they coughed up they webs
+      instead of getting it out.. you know the normal way.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: ..Through their butt.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: The revolutionary thinking was popularized soon after they closed down
+      and it was established that the effort it took to make spider webs was so great
+      compared to other professions that all most other spiders just turned to other
+      jobs leaving the last spiders with a monopoly over their thread.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: 'Through that the demand was higher than ever for it but most spiders had
+      enough of those bad working conditions from long ago. As a result they let
+      the last spiders stay with their monopoly and spider webs stayed rare until
+      now. '
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: There you have it. That's why you should never undermine work with such
+      an inspiring history!
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Don't you wish you had been there? And just think of all the mafia like
+      conflicts that were probably happening behind the scenes of it all.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Anyways it also looks really nice so even if you aren't cultured you should
+      at least be able to see how cute it looks hehe.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 3
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  background: {fileID: 21300000, guid: 0f061b4bd0275bc4eb60f2af31e7375a, type: 3}
+  backgroundVideo: {fileID: 4554513086353460736, guid: 6e9d5d062320dd54bb047daa327d083d,
+    type: 3}
+  nextScene: {fileID: 11400000, guid: 997007a8ed587f945aa128e14233b247, type: 2}

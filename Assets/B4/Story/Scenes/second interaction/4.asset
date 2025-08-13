@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c5ff670b563c94cac9e25fe4b793a0, type: 3}
+  m_Name: 4
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: What are you staring at? Oh wait you think this star necklace is-? Nonono
+      I would never be so hypocritical and call someone out for being old fashioned
+      if I'd have a pentagram myself.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 0
+      actionType: 1
+      coords: {x: 50, y: 0}
+      moveSpeed: 1
+  - text: Of course not! You see this may look like one but those lines that would
+      normally make up a pentagram have a very different meaning! Yeah I can explain!
+      So you see- uhm-
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 1
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 1
+  - text: ...
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 1
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Fine! Alright you are right it is a pentagram. Coming for my insecurities
+      this is really mean!
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 1
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Well at least I am having this because I need to. I can't use magic if
+      I don't have this. Do you think I would otherwise choose this attire? But everything
+      around it like this cute heart necklace
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 1
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: '*whispers* it''s an actual heart btw hehe, or this super cool knights
+      armor that looks just like the uniform my favorite magical girl has, hell I
+      even had my cute spider colleagues here weave me a skirt and necklace just
+      like hers! Do you even fathom how priceless of a posession this is?'
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 1
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Spiders are very distinguished craftsmen after all. But I understand. You
+      probably had a lapse of judgement when you saw someone as inspiring as me.
+      I'll fogive you for I am a true advocate for justice.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 1
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  - text: Now let me go and I might show you how you can make your own magical girl
+      attire and join me.
+    speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+    actions:
+    - speaker: {fileID: 11400000, guid: c197f2a5c0f76f94d91959bbfb007d76, type: 2}
+      spriteIndex: 1
+      actionType: 0
+      coords: {x: 0, y: 0}
+      moveSpeed: 0
+  background: {fileID: 21300000, guid: 0f061b4bd0275bc4eb60f2af31e7375a, type: 3}
+  backgroundVideo: {fileID: 4554513086353460736, guid: e0ebcb67bb753fc469c2b83f87bb7fb1,
+    type: 3}
+  nextScene: {fileID: 11400000, guid: 8fa21c937e358664d8fd3f7a8ad685db, type: 2}
