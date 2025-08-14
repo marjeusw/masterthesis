@@ -9,6 +9,7 @@ public class AnnouncementTIme : MonoBehaviour
     public AudioClip announcementClip;
     public PickSoul soul;
     public bool isAnnounced;
+    public bool announcementFinished = false;
 
     //turn off hands
     public Material originalHand;
@@ -48,7 +49,7 @@ public class AnnouncementTIme : MonoBehaviour
         rend.material = standbyHands;
         rendr.material = standbyHands;
         //hands set to standby until end of announcement (play coroutine) and then back to original
-        isAnnounced = true;
+        //isAnnounced = true;
 
         LimboAnnouncement.clip = announcementClip;
         LimboAnnouncement.Play();
@@ -64,9 +65,11 @@ public class AnnouncementTIme : MonoBehaviour
         yield return new WaitUntil(() => !LimboAnnouncement.isPlaying);
         yield return new WaitForSeconds(0.5f); // prevent immediate re-trigger
         Debug.Log("coroutine end");
-        isAnnounced = false; // allow new dialogue on next trigger
+        //isAnnounced = false; // allow new dialogue on next trigger
                              // DO NOT call Dialogue() again here!
         rend.material = originalHand;
         rendr.material = originalHand;
+
+        announcementFinished = true; //for picksoulscript to do scenechange after
     }
 }

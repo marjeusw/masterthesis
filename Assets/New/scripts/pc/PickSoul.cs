@@ -19,7 +19,7 @@ public class PickSoul : MonoBehaviour
         //EventManager.StartPickSoulEvent();
 
         //set bool true in coroutine for this and when true, next time trigger here change scene
-        if(announcement.isAnnounced == false)
+        if(announcement.announcementFinished)
         {
             SceneChange();
         }
