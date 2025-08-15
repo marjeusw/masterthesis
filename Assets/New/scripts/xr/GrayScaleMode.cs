@@ -16,7 +16,23 @@ public class GrayScaleMode : MonoBehaviour
     public SwitchLayer switchLayer4three;
     public SwitchLayer switchLayer4four;
 
+
+    //for the other objects
+    public SwitchLayer switchSpider;
+    public SwitchLayer switchEyes;
+    public SwitchLayer switchFlower;
+    public SwitchLayer switchCross;
+    public SwitchLayer switchBubbles;
+    public SwitchLayer switchChibi;
+
+
     public Volume postProcessing;
+
+    public Volume postProcessingHalf;
+
+
+    //mute radio
+    public AudioSource radio;
     //public Transform parentObject;
     //public List<Transform> allObjects;
     // Start is called before the first frame update
@@ -33,8 +49,15 @@ public class GrayScaleMode : MonoBehaviour
             colorAdjustments.contrast.value = -13f;
             colorAdjustments.postExposure.value = -1.19f;
         }
+        if (postProcessingHalf.profile.TryGet(out ColorAdjustments halfColorAdjustments)) //for the half post one (just so that the objects are in another layer and non interactive but still accentuated)
+        {
+            halfColorAdjustments.saturation.value = -100f;
+            halfColorAdjustments.contrast.value = -13f;
+            halfColorAdjustments.postExposure.value = -1.19f;
+        }
         ObjectsNewLayer();
-       
+
+        radio.Stop();
     }
 
     public void ObjectsNewLayer()
@@ -47,6 +70,14 @@ public class GrayScaleMode : MonoBehaviour
         switchLayer4two.NoPostLayer();
         switchLayer4three.NoPostLayer();
         switchLayer4four.NoPostLayer();
+
+        //for other objects
+        switchSpider.HalfPostLayer();
+        switchEyes.HalfPostLayer();
+        switchFlower.HalfPostLayer();
+        switchCross.HalfPostLayer();
+        switchBubbles.HalfPostLayer();
+        switchChibi.HalfPostLayer();
     }
 
     

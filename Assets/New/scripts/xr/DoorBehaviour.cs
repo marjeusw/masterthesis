@@ -11,6 +11,9 @@ public class DoorBehaviour : MonoBehaviour
     public bool isSure = false;
     public GameObject soul;
     public ParticleSystem particleSoul;
+
+    public AudioSource soulAudio;
+    public AudioClip sure;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,8 @@ public class DoorBehaviour : MonoBehaviour
                 //function for dialogue saying "are you sure?"
                 isSure = true; //since afterwards they know they can't go back
                 Debug.Log("try1");
+                soulAudio.clip = sure;
+                soulAudio.Play();
             }
             else
             {
