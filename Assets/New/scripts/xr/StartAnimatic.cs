@@ -10,6 +10,7 @@ public class StartAnimatic : MonoBehaviour
 
     public nextLine line;
 
+    public float time;
 
 
     
@@ -37,7 +38,7 @@ public class StartAnimatic : MonoBehaviour
     {
         Debug.Log("routinestart");
         Debug.Log("Waiting before checking video state...");
-        yield return new WaitForSeconds(15f); // <-- Wait 15 seconds first for good measure (otherwise it'll fade out immediately)
+        yield return new WaitForSeconds(time); // <-- Wait 15 seconds first for good measure (otherwise it'll fade out immediately)
         yield return new WaitUntil(() => !animatic.isPlaying);
         yield return new WaitForSeconds(3f); // prevent immediate sceneswitch
         Debug.Log("coroutine end");

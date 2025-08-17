@@ -6,6 +6,7 @@ public class StartEndingScreen : MonoBehaviour
 {
     public EndingManager manager;
     public GameObject screen;
+    public GameObject screenFront;
     public GameObject House;
     //public void OnTriggerEnter(Collider other)
     //{
@@ -39,5 +40,10 @@ public class StartEndingScreen : MonoBehaviour
         int LayerNoPost = LayerMask.NameToLayer("NoPost");
         screen.layer = LayerNoPost;
         Debug.Log("new layer");
+
+        //for front screen
+        int LayerNoPostFront = LayerMask.NameToLayer("NoPost");
+        screenFront.layer = LayerNoPostFront;
+        Debug.Log("new layer Front");
     }
 }

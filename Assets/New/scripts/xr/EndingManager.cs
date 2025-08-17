@@ -25,8 +25,15 @@ public class EndingManager : MonoBehaviour
     public VideoClip clipGood;
     public VideoClip clipBad;
 
+    public VideoPlayer videoPlayerFront;
+    public VideoClip clipFrontGood;
+    public VideoClip clipFrontBad;
+
     //check for candles if this is first run
     public static bool candles;
+
+    //soul disappear after ending (so not in fase away)
+    public GameObject Soul;
 
     void Start()
     {
@@ -99,6 +106,10 @@ public class EndingManager : MonoBehaviour
         goodEnding = true;
         videoPlayer.clip = clipGood;
         videoPlayer.Play();
+
+        //for the front
+        videoPlayerFront.clip = clipFrontGood;
+        videoPlayerFront.Play();
         isPlayed = true;
         
         StartCoroutine(waitForVideoPlayer(true)); //good ending
@@ -110,6 +121,10 @@ public class EndingManager : MonoBehaviour
         goodEnding = false;
         videoPlayer.clip = clipBad;
         videoPlayer.Play();
+
+        //for the front
+        videoPlayerFront.clip = clipFrontBad;
+        videoPlayerFront.Play();
         isPlayed = true;
         
         StartCoroutine(waitForVideoPlayer(false)); //bad ending
@@ -141,10 +156,11 @@ public class EndingManager : MonoBehaviour
         Debug.Log("routinestart");
         Debug.Log("Waiting before checking video state...");
         yield return new WaitForSeconds(15f); // <-- Wait 15 seconds first for good measure (otherwise it'll fade out immediately)
-        yield return new WaitUntil(() => !videoPlayer.isPlaying);
+        yield return new WaitUntil(() => !videoPlayer.isPlaying); //waits till video in the back is ended (since one front video is always looping due to time constraints  no full animation
         yield return new WaitForSeconds(3f); // prevent immediate sceneswitch
         Debug.Log("coroutine end");
         isPlayed = false;
+        Soul.SetActive(false);
 
         if (good)
             BackGood();
