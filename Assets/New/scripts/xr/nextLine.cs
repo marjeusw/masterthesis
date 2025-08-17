@@ -7,7 +7,8 @@ public class nextLine : MonoBehaviour
 {
     public GameObject AnimaticLine;
     public GameObject PortalLine;
-    public GameObject LimboDimension;
+    public GameObject LimboDimension; //graves and stuff
+    public GameObject TutorialDimension; //so the colliders won't affect anything when going back
     public GameObject Ball;
     public GameObject Dice;
 
@@ -73,12 +74,14 @@ public class nextLine : MonoBehaviour
     public void LimboGone() //since this ones annoying
     {
         LimboDimension.SetActive(false);
+        TutorialDimension.SetActive(true);
         LimboJam.Pause();
     }
 
     public void LimboBack()
     {
         LimboDimension.SetActive(true);
+        TutorialDimension.SetActive(false);
         LimboJam.Play();
     }
 
