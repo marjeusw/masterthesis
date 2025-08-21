@@ -22,7 +22,7 @@ public class GrayScaleMode : MonoBehaviour
     public SwitchLayer switchEyes;
     public SwitchLayer switchFlower;
     public SwitchLayer switchCross;
-    public SwitchLayer switchBubbles;
+    //public SwitchLayer switchBubbles;
     public SwitchLayer switchChibi;
 
 
@@ -76,7 +76,7 @@ public class GrayScaleMode : MonoBehaviour
         switchEyes.HalfPostLayer();
         switchFlower.HalfPostLayer();
         switchCross.HalfPostLayer();
-        switchBubbles.HalfPostLayer();
+        //switchBubbles.HalfPostLayer();
         switchChibi.HalfPostLayer();
     }
 

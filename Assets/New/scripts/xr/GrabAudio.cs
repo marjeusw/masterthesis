@@ -28,6 +28,7 @@ public class GrabAudio : MonoBehaviour
 
     //had chatgpt help make this script way cleaner
     private bool audioLocked = false;
+    private bool opened = false; //just for the diary after being opened so the sound repeats as opened audio but won't wait until the dialogue is finished anymore
     private int complimented = 0;
 
 
@@ -44,14 +45,24 @@ public class GrabAudio : MonoBehaviour
 
     public void AudioAsh() => PlayAudio(ash, 10f);
     public void AudioSailor() => PlayAudio(sailor, 10f);
-    public void AudioDiary() => PlayAudio(diary, 10f);
-    public void AudioSticky() => PlayAudio(kettle, 10f);
-    public void AudioSpider() => PlayAudio(spider, 10f);
-    public void AudioFlower() => PlayAudio(flower, 10f);
-    public void AudioEyeballs() => PlayAudio(eyeballs, 10f);
-    public void AudioKettle() => PlayAudio(kettle, 10f);
-    public void AudioChibi() => PlayAudio(chibi, 10f);
-    public void AudioCross() => PlayAudio(cross, 10f);
+    public void AudioDiary()
+    {
+        if (opened == false)
+        {
+            PlayAudio(diary, 4f);
+        }
+        else if(opened == true)
+        {
+            PlayAudio(diaryOpened);
+        }
+    }
+    public void AudioSticky() => PlayAudio(kettle, 4f);
+    public void AudioSpider() => PlayAudio(spider, 4f);
+    public void AudioFlower() => PlayAudio(flower, 4f);
+    public void AudioEyeballs() => PlayAudio(eyeballs, 4f);
+    public void AudioKettle() => PlayAudio(kettle, 4f);
+    public void AudioChibi() => PlayAudio(chibi, 4f);
+    public void AudioCross() => PlayAudio(cross, 4f);
 
     public void AudioNoteCompliment()
     {
@@ -74,9 +85,12 @@ public class GrabAudio : MonoBehaviour
 
     public void AudioDiaryOpened()
     {
-        if (audioLocked) return;
+        StopAllCoroutines();      // Cancel any unlock timers
+        //if (audioLocked) return;
+        audioLocked = true;      // Reset lock
 
-        audioLocked = true; // Lock *everything*
+        //audioLocked = true; // Lock *everything*
+        soulAudio.Stop();         // Stop currently playing audio
         soulAudio.clip = diaryOpened;
         soulAudio.Play();
         StartCoroutine(UnlockAfterDiaryOpened());
@@ -88,6 +102,7 @@ public class GrabAudio : MonoBehaviour
         yield return new WaitUntil(() => !soulAudio.isPlaying);
         yield return new WaitForSeconds(0.5f); // Optional gap
         audioLocked = false;
+        opened = true; //for the diary after being opened
     }
 
     private IEnumerator UnlockAfterSeconds(float seconds)
