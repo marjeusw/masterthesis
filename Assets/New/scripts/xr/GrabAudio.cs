@@ -23,6 +23,12 @@ public class GrabAudio : MonoBehaviour
     public AudioClip chibi;
     public AudioClip cross;
 
+
+    public GameObject reloadSpider, reloadFlower, reloadEyeballs, reloadChibi, reloadCross, reloadSailor, reloadAsh, reloadDiary /*reloadKettle, reloadSticky*/;
+
+    //bool for objects to not play twice
+    private bool noMoreSpider, noMoreFlower, noMoreEyeballs, noMoreChibi, noMoreCross, noMoreSailor, noMoreAsh, noMoreDiary/*, noMoreKettle, noMoreSticky*/;
+
     //make audio not play for some time
     //private bool hasBeenPlayed = false;
 
@@ -43,8 +49,8 @@ public class GrabAudio : MonoBehaviour
             StartCoroutine(UnlockAfterSeconds(lockDuration));
     }
 
-    public void AudioAsh() => PlayAudio(ash, 10f);
-    public void AudioSailor() => PlayAudio(sailor, 10f);
+    public void AudioAsh() => PlayAudio(ash, 4f);
+    public void AudioSailor() => PlayAudio(sailor, 4f);
     public void AudioDiary()
     {
         if (opened == false)
@@ -110,6 +116,112 @@ public class GrabAudio : MonoBehaviour
         audioLocked = true;
         yield return new WaitForSeconds(seconds);
         audioLocked = false;
+    }
+
+
+    //for one time use for objects
+
+    public void AudioAshObject() //make reload appear
+     {
+        if (noMoreAsh == false)
+        {
+            PlayAudio(ash, 2f);
+            reloadAsh.SetActive(true);
+            noMoreAsh = true;
+        }
+    }
+    public void AudioSailorObject()
+    {
+        if (noMoreSailor == false)
+        {
+            PlayAudio(sailor, 2f);
+            reloadSailor.SetActive(true);
+            noMoreSailor = true;
+        }
+    }
+    public void AudioDiaryObject()
+    {
+        if (noMoreDiary == false)
+        {
+            
+            if (opened == false)
+            {
+                PlayAudio(diary, 2f);
+            }
+            else if (opened == true)
+            {
+                PlayAudio(diaryOpened);
+            }
+            reloadDiary.SetActive(true);
+            noMoreDiary = true;
+        }
+    }
+
+    //sticky maybe work for later
+    //public void AudioStickyObject()
+    //{
+    //    if (noMoreKettle == false)
+    //    {
+    //        PlayAudio(kettle, 1f);
+    //        reloadKettle.SetActive(true);
+    //        noMoreKettle = true;
+    //    }
+    //}
+    public void AudioSpiderObject()
+    {
+        if (noMoreSpider == false)
+        {
+            PlayAudio(spider, 1f);
+            reloadSpider.SetActive(true);
+            noMoreSpider = true;
+        }
+    }
+    public void AudioFlowerObject()
+    {
+        if (noMoreFlower == false)
+        {
+            PlayAudio(flower, 1f);
+            reloadFlower.SetActive(true);
+            noMoreFlower = true;
+        }
+    }
+    public void AudioEyeballsObject()
+    {
+        if (noMoreEyeballs == false)
+        {
+            PlayAudio(eyeballs, 1f);
+            reloadEyeballs.SetActive(true);
+            noMoreEyeballs = true;
+        }
+    }
+
+    //kettle maybe work for later as with sticky
+    //public void AudioKettleObject()
+    //{
+    //    if (noMoreKettle == false)
+    //    {
+    //        PlayAudio(kettle, 1f);
+    //        reloadKettle.SetActive(true);
+    //        noMoreKettle = true;
+    //    }
+    //}
+    public void AudioChibiObject()
+    {
+        if (noMoreChibi == false)
+        {
+            PlayAudio(chibi, 1f);
+            reloadChibi.SetActive(true);
+            noMoreChibi = true;
+        }
+    }
+    public void AudioCrossObject()
+    {
+        if (noMoreCross == false)
+        {
+            PlayAudio(cross, 1f);
+            reloadCross.SetActive(true);
+            noMoreCross = true;
+        }
     }
 }
 
