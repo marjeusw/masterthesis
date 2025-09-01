@@ -1,3 +1,11 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Script for the Door in the soul room 
+//plays tiny door flick open animation for triggering the handle once, afterwards it makes the soul object appear and talk for the next stage
+//if the door isn't triggered it keeps playing the idle animation of being closed
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,11 +22,7 @@ public class DoorBehaviour : MonoBehaviour
 
     public AudioSource soulAudio;
     public AudioClip sure;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     public void OnTriggerEnter(Collider other)
     {
@@ -44,7 +48,7 @@ public class DoorBehaviour : MonoBehaviour
             if (other.gameObject.CompareTag("Hand"))
             {
                 animator.Play("doorClosed");
-                grayscale.EnterGreyscale();//animator.Play("doorOpenFull"); //do this after greyscale scene ends instead
+                grayscale.EnterGreyscale();
                 //function for dialogue saying "are you sure?"
                 isSure = true; //since afterwards they know they can't go back
                 Debug.Log("Try2");
@@ -52,7 +56,7 @@ public class DoorBehaviour : MonoBehaviour
                 //soul appear
                 soul.SetActive(true);
                 particleSoul.Play();
-                //endingManager.CheckForEnding(); //also do this after greyscale
+               
             }
             else
             {
@@ -62,9 +66,5 @@ public class DoorBehaviour : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

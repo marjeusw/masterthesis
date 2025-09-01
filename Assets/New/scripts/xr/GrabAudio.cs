@@ -1,3 +1,12 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Script for playing all the audio of the objects that can be grabbed (as well as hovered over) in the first phase of the soul room 
+//USED CHATGPT FOR REFINING THIS SCRIPT IN THE AUDIO LOCKED SECTION (my first attempts that also worked are further down)
+//has one coroutine for all other objects and one for the diary that stops all coroutines before (if the witch was talking) and immediately reprimands the user instead for openming the diary
+//Sticky notes logic where after each sticky note a more embarrassed witch answers to the user complimenting her
+//Also in the end added the reload stuff. Now if the object gets interacted with the audio only plays once (before, every time it was touched after a few seconds) and the user instead has to press the reload UI button on top of the object with their trigger button 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,8 +38,7 @@ public class GrabAudio : MonoBehaviour
     //bool for objects to not play twice
     private bool noMoreSpider, noMoreFlower, noMoreEyeballs, noMoreChibi, noMoreCross, noMoreSailor, noMoreAsh, noMoreDiary/*, noMoreKettle, noMoreSticky*/;
 
-    //make audio not play for some time
-    //private bool hasBeenPlayed = false;
+    
 
     //had chatgpt help make this script way cleaner
     private bool audioLocked = false;
@@ -224,6 +232,8 @@ public class GrabAudio : MonoBehaviour
         }
     }
 }
+
+//the script before chatgpt
 
     //public void AudioAsh()
     //{

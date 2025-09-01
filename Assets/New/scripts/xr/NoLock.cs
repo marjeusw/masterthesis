@@ -1,3 +1,9 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//script that handles the diary logic
+//if the lock is touched then with the poke interactor that has the tag hand on it, it plays the animation and decreses score, if not but still foun (detected) then it just increases it
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,20 +21,7 @@ public class NoLock : MonoBehaviour
     public bool noLock = false;
     public bool trust = false;
     public bool useOnce =false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //if(noLock == true)
-        //{
-        //    NoLockFunction();
-        //}
-    }
+    
 
 
 
@@ -45,9 +38,7 @@ public class NoLock : MonoBehaviour
 
     public void NoLockFunction()
     {
-        //animator.GetComponent<AnimationClip>();
-        //animator.Play("Book_open");
-        
+       
         Lock.SetActive(false);
         animator.Play("Book_open");
         audio.AudioDiaryOpened();

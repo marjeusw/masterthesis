@@ -1,3 +1,9 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Script that checks for triggers tagged Hand, Punch, and Fog
+//with it the dialogue of the soul, the ending screen when the soul enters it and the Fog get started
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

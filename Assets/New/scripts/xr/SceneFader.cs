@@ -1,3 +1,9 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Script that handles the fade in and out functions after the endings (good ending white fade in and out, bad end black fade in and out) that get called in the ending manager
+//also handles the Title screen with the little logo in the beginning
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -108,7 +114,7 @@ public class SceneFader : MonoBehaviour
 
     IEnumerator FadeTitle()
     {
-        //yield return new WaitForSeconds(3f);
+        
         float t = 0;
         Color c = titleScreen.color;
         while (t < 1)

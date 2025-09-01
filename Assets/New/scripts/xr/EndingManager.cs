@@ -1,3 +1,10 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Ending Manager Script in which the score for the ending logic is kept, as well as checking for which ending it is (when the soul object enters the screen),
+//as well as what happens in that ending (playing the video and fading to white or black afterwards depending on which ending it is)
+//Good ending if 2, bad ending if less than 2
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +18,7 @@ public class EndingManager : MonoBehaviour
     public bool nothingUsed = true;
     public NoLock noLock;
     public NoteCollide note;
-    // Start is called before the first frame update
-
-
-    //--------------------
+   
     //endings
     public static bool goodEnding; //used also later to fade to white or black in ending
     public SceneFader fader;
@@ -29,10 +33,10 @@ public class EndingManager : MonoBehaviour
     public VideoClip clipFrontGood;
     public VideoClip clipFrontBad;
 
-    //check for candles if this is first run
+    //check for candles (if this is the first run) - since the candles will be turned off if its not
     public static bool candles;
 
-    //soul disappear after ending (so not in fase away)
+    //soul disappear after ending (so not in fade away)
     public GameObject Soul;
 
     void Start()
@@ -40,14 +44,14 @@ public class EndingManager : MonoBehaviour
         score = 0;
     }
 
-    public void IncreaseScoreBy2()
+    public void IncreaseScoreBy2() //for shmailor shmoon
     {
         score += 2;
         Debug.Log("Score is 2 more");
         nothingUsed = false;
     }
 
-    public void IncreaseScoreBy1()
+    public void IncreaseScoreBy1() //this interactive spot is also very unique so it gets its own function
     {
 
         //notes
@@ -59,7 +63,7 @@ public class EndingManager : MonoBehaviour
         
         
     } 
-    public void IncreaseDiaryBy1()
+    public void IncreaseDiaryBy1() //had to add this since the diary is behaving differently due to its feature of being an interactive spot
     {
         if (noLock.useOnce == true)
         {
@@ -71,14 +75,15 @@ public class EndingManager : MonoBehaviour
         }
     }
 
-    public void DecreaseScoreBy1()
+    public void DecreaseScoreBy1() //after diary is opened
     {
-        score -= 1;
+        score -= 1; //maybe later I'll make this -2 to be an actual punishment since rn its just making the diary not count as a found object
         Debug.Log("Score is 1 less");
         nothingUsed = false;
     }
-    // Update is called once per frame
-    void Update()
+    
+
+    void Update() //lets me check the score for debugging and is just nice to have
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
@@ -100,10 +105,10 @@ public class EndingManager : MonoBehaviour
     }
 
 
-    //reference in the greyscalescript the bools noteActivated and noLock. for noteActivated good dialogue about complimnents; for noLock activated bad dialogue about user not being trustworthy; trust dialogue about how user is trustworthy. if none activated && no empathy objects in basket (nothinUsed) -> dialogue about how no interest and bad ending
     public void GoodEnding()
     {
         goodEnding = true;
+        //for the back
         videoPlayer.clip = clipGood;
         videoPlayer.Play();
 
@@ -119,6 +124,7 @@ public class EndingManager : MonoBehaviour
     public void BadEnding()
     {
         goodEnding = false;
+        //for the back
         videoPlayer.clip = clipBad;
         videoPlayer.Play();
 
@@ -141,7 +147,7 @@ public class EndingManager : MonoBehaviour
 
     public void BackGood()
     {
-        //inhere
+        
         layer.DefaultLayer();
         
         fader.FadeAndLoad("candles", 1f);
@@ -157,7 +163,7 @@ public class EndingManager : MonoBehaviour
         Debug.Log("Waiting before checking video state...");
         yield return new WaitForSeconds(15f); // <-- Wait 15 seconds first for good measure (otherwise it'll fade out immediately)
         yield return new WaitUntil(() => !videoPlayer.isPlaying); //waits till video in the back is ended (since one front video is always looping due to time constraints  no full animation
-        yield return new WaitForSeconds(3f); // prevent immediate sceneswitch
+        yield return new WaitForSeconds(3f); // prevent immediate scene switch
         Debug.Log("coroutine end");
         isPlayed = false;
         Soul.SetActive(false);

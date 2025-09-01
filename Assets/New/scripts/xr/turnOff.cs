@@ -1,3 +1,9 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//this script is just for the 2nd loop
+//it checks if the user is done with the first loop and if so turns off the candles and soul model on the grave as well as it turns on the last text to show credits
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

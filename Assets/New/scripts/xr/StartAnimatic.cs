@@ -1,3 +1,10 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Script that handles the animatic (Tutorial sequence)
+//basically sets the tutorial writing on the canvas to false so that theres nothing attention grabbing besides the tutorial, starts the animatic, afterwards makes the screen go down,
+//lastly makes the line to the now uncovered portal appear
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,14 +48,14 @@ public class StartAnimatic : MonoBehaviour
     {
         Debug.Log("routinestart");
         Debug.Log("Waiting before checking video state...");
-        yield return new WaitForSeconds(time); // <-- Wait 15 seconds first for good measure (otherwise it'll fade out immediately)
+        yield return new WaitForSeconds(time); //wait first for good measure (otherwise it'll fade out immediately)
         yield return new WaitUntil(() => !animatic.isPlaying);
         animaticScreen.Play("animaticdown");
-        yield return new WaitForSeconds(3f); // prevent immediate sceneswitch
+        yield return new WaitForSeconds(3f); //prevents immediate sceneswitch
         Debug.Log("coroutine end");
         isPlayed = false;
 
-        line.LineToPortal();
+        line.LineToPortal(); //sets line to the portal to true when the animatic is done
     }
 
 

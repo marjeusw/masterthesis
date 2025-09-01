@@ -1,3 +1,8 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Script that manages the tutorial elements like the line and text appearing after some time and what happens when interacting with the sphere and cube as well as what happens after returning there from the 1st loop
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,21 +31,8 @@ public class nextLine : MonoBehaviour
     //for line appear after video
     public VideoPlayer animatic;
 
-    //for after 1st run
+  
     
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void LineToAnimatic()
     {
         if (EndingManager.candles == false)
@@ -68,25 +60,25 @@ public class nextLine : MonoBehaviour
         PortalLine.SetActive(true);
         PortalPlane.SetActive(true);
         CylinderVideo.SetActive(false);
-        //LimboDimension.SetActive(true); not yet
+        
     }
 
-    public void LimboGone() //since this ones annoying
+    public void LimboGone() //When stepping through the portal this gets called (since otherwise the colliders of the terrain would be annoying)
     {
         LimboDimension.SetActive(false);
         TutorialDimension.SetActive(true);
         LimboJam.Pause();
     }
 
-    public void LimboBack()
+    public void LimboBack() //when stepping back through the portal this gets called (so colliders from this side don't interfere either)
     {
         LimboDimension.SetActive(true);
         TutorialDimension.SetActive(false);
         LimboJam.Play();
     }
 
-    //just for funsies after the 1st loop
-
+   
+    //for after 1st run
     public void SecondLoop()
     {
         //turn off ball and dice

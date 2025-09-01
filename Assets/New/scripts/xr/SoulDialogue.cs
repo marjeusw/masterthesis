@@ -1,3 +1,12 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//TINY BIT OF HELP FROM CHATGPT HERE (I can into an infinite loop at the end of the script that I fixed with its help)
+//Script that handles all the dialogue in the end for the objects the user found
+//I decided to make the user poke the soul object each time for a new line to make it not as boring to just sit and wait while the witch is talking but I may change that at a later date
+//Its basically a lot of if else statements that all go to a coroutine in which the hands are grayed out to show the user can't interact while the soul is talking
+//it culminates with the soul walking out
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -211,8 +220,8 @@ public class SoulDialogue : MonoBehaviour
                     rend.material = standbyHands;
                     rendr.material = standbyHands;
                     //bashful animation (maybe look around awkwardly) play here
-                    anims.Play("bashful laugh"); //may include the super happy one as another case when more than once this one
-                    //soulAudio.PlayOneShot(stickyClip);
+                    anims.Play("bashful laugh"); 
+                   
                     soulAudio.clip = stickyClip;
                     soulAudio.Play();
                     isPlayed = true;
@@ -236,7 +245,7 @@ public class SoulDialogue : MonoBehaviour
                     rendr.material = standbyHands;
                     //stuck in tracks stunned animation here
                     anims.Play("stunned");
-                    //soulAudio.PlayOneShot(diaryClosedClip);
+                   
                     soulAudio.clip = diaryClosedClip;
                     soulAudio.Play();
                     isPlayed = true;
@@ -303,19 +312,7 @@ public class SoulDialogue : MonoBehaviour
         soulAnimator.Play("WalkOut");
     }
 
-    //IEnumerator waitForDialogue()
-    //{
-    //    Debug.Log("routinestart");
-    //    while (soulAudio.isPlaying)
-    //    {
-    //        yield return null;
-
-
-    //    }
-    //    isPlayed = true; //might have to change this one
-    //    Debug.Log("coroutine end");
-    //    Dialogue(); <-- infinite loop right here
-    //}
+   
 
     IEnumerator waitForDialogue()
     {
@@ -329,4 +326,5 @@ public class SoulDialogue : MonoBehaviour
         rendr.material = originalHand;
     }
     //enddialogue was fixed with the help of chatgpt since I created an infinite loop before. oopsie
+    //only used it to look over it when I got stuck but did everything else myself
 }

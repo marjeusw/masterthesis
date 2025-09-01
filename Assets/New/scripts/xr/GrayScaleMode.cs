@@ -1,3 +1,9 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Script that turns the scene into gray scale and changes all empathy objects to a layer where they can still be colourful and non interactive as well as the non empathy objects also to a layer that is non interactive but still gray
+//its done with accessing 2 post processing volumes and a culling mask for the nopostcam which is in a stack on the main camera
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,13 +39,7 @@ public class GrayScaleMode : MonoBehaviour
 
     //mute radio
     public AudioSource radio;
-    //public Transform parentObject;
-    //public List<Transform> allObjects;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //FindAllNestedChildren(parentObject);
-    }
+    
 
     public void EnterGreyscale()
     {
@@ -49,7 +49,7 @@ public class GrayScaleMode : MonoBehaviour
             colorAdjustments.contrast.value = -13f;
             colorAdjustments.postExposure.value = -1.19f;
         }
-        if (postProcessingHalf.profile.TryGet(out ColorAdjustments halfColorAdjustments)) //for the half post one (just so that the objects are in another layer and non interactive but still accentuated)
+        if (postProcessingHalf.profile.TryGet(out ColorAdjustments halfColorAdjustments)) //for the half post one (just so that the non empathy but still interactive objects are in another layer and non interactive but still accentuated)
         {
             halfColorAdjustments.saturation.value = -100f;
             halfColorAdjustments.contrast.value = -13f;
@@ -57,7 +57,7 @@ public class GrayScaleMode : MonoBehaviour
         }
         ObjectsNewLayer();
 
-        radio.Stop();
+        radio.Stop(); //don't want the radio playing over the witch explaining her sad backstory
     }
 
     public void ObjectsNewLayer()
@@ -76,12 +76,11 @@ public class GrayScaleMode : MonoBehaviour
         switchEyes.HalfPostLayer();
         switchFlower.HalfPostLayer();
         switchCross.HalfPostLayer();
-        //switchBubbles.HalfPostLayer();
         switchChibi.HalfPostLayer();
     }
 
     
-
+    //this one didn't work as intended but I'll keep it here as reference on how to access nested children recursively through script
     //recursive algorithm to search for grandchildren and stuff
     //realized that I can just attach all visible children to the oarent and only reference children (not grandchildren)
     //easy peasy
@@ -100,9 +99,5 @@ public class GrayScaleMode : MonoBehaviour
     //    }
     //}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

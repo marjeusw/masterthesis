@@ -1,3 +1,10 @@
+//script by Marje-Alicia Harms
+//768147 Expanded Media
+//Project: LimboAssist - Master Thesis Prototype
+//Script for the Announcement that plays after the user steps in front of the soul (after coming out of the portal from the tutorial)
+//plays announcement and sets the hands to non interactive and greyed out for the duration of it
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -63,10 +70,10 @@ public class AnnouncementTIme : MonoBehaviour
     {
         Debug.Log("routinestart");
         yield return new WaitUntil(() => !LimboAnnouncement.isPlaying);
-        yield return new WaitForSeconds(0.5f); // prevent immediate re-trigger
+        yield return new WaitForSeconds(0.5f); // prevents immediate re-trigger
         Debug.Log("coroutine end");
-        //isAnnounced = false; // allow new dialogue on next trigger
-                             // DO NOT call Dialogue() again here!
+        
+
         rend.material = originalHand;
         rendr.material = originalHand;
 
